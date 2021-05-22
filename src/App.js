@@ -1,4 +1,5 @@
 import { Component } from "react";
+import './App.css'
 
 const shi = require("jinrishici");
 
@@ -12,10 +13,7 @@ export default class App extends Component {
       dynasty: ""
     };
   }
-  // origin: Object
-  // title: "霜叶飞·重九"
-  // dynasty: "宋代"
-  // author: "吴文英"
+
   componentDidMount() {
     shi.load((result) => {
       this.setState({
@@ -30,10 +28,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="shi-body">
         <div className="ci">{this.state.ci}</div>
         <div className="time">
-          <div>{this.state.dynasty}</div>
+          <div className="dynasty">{this.state.dynasty}</div>
           <div>{this.state.author}</div>
         </div>
         <div className="title">{this.state.title}</div>
