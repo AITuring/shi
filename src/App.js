@@ -197,6 +197,7 @@ export default class App extends Component {
         }}
         >
         <div className="ci">{this.state.ci}</div>
+        
         <div className="ci-title">
           <div className="title"><a href={`https://www.google.com.hk/search?q=${this.state.author} ${this.state.title}`} target="_blank">[{this.state.title}]</a></div>
           <div className="time">
