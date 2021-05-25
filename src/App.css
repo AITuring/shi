@@ -3,6 +3,8 @@
   src: url('./font/jinling.TTF');
 }
 
+/* TODO 自适应，媒体查询没起作用 */
+
 *{ margin:0; padding:0; }
 
 html {
