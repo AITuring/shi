@@ -7,3 +7,5 @@
 - [ ] 随机渐变色
 - [ ] 波浪还需调整
 - [ ] favicon.ico
+- [ ] pwd
+- [ ] chrome插件
