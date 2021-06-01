@@ -30,7 +30,7 @@
   }
   
   .ci {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-top: 30vh;
     margin-bottom: 4vh;
   }
@@ -38,6 +38,7 @@
   .ci-title {
     display: flex;
     align-items: center;
+    margin-bottom: 40vh;
   }
   
   .time {
