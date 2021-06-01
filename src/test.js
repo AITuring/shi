@@ -187,7 +187,7 @@ export default class Test extends Component {
   }
 
   render() {
-    const index = Math.floor((Math.random()*colors.length))
+    const index = Math.floor((Math.random()*(colors.length - 4)))
     const currentColor = colors[index]
     const currentShi = this.state.ci
     return (
@@ -199,8 +199,8 @@ export default class Test extends Component {
           id="background">
           <defs>
             <linearGradient id="warmGradient">
-              <stop offset="5%" stopColor="#00bc12" stopOpacity="0.5"></stop>
-              <stop offset="95%" stopColor="#0c8918" stopOpacity="0.4"></stop>
+              <stop offset="5%" stopColor={colors[index]} stopOpacity="0.5"></stop>
+              <stop offset="95%" stopColor={colors[index+1]} stopOpacity="0.4"></stop>
             </linearGradient>
           </defs>
           <path d="M 0,600 C 0,600 0,120 0,120 C 74.14340942562592,108.38512518409425 148.28681885125184,96.77025036818851 206,99 C 263.71318114874816,101.22974963181149 304.99613402061857,117.30412371134021 363,117 C 421.00386597938143,116.69587628865979 495.7286450662739,100.01325478645064 558,93 C 620.2713549337261,85.98674521354936 670.0892857142857,88.64285714285717 724,93 C 777.9107142857143,97.35714285714283 835.9142120765833,103.41531664212076 899,116 C 962.0857879234167,128.58468335787924 1030.2538659793813,147.6958762886598 1086,158 C 1141.7461340206187,168.3041237113402 1185.0703240058913,169.80117820324006 1242,162 C 1298.9296759941087,154.19882179675994 1369.4648379970545,137.09941089837997 1440,120 C 1440,120 1440,600 1440,600 Z" stroke="none" strokeWidth="0" fill="url(#warmGradient)">
@@ -243,8 +243,8 @@ export default class Test extends Component {
           id="foreground">
           <defs>
             <linearGradient id="coldGradient">
-              <stop offset="5%" stopColor="#00d084" stopOpacity="0.5"></stop>
-              <stop offset="95%" stopColor="#0693e3" stopOpacity="0.66"></stop>
+              <stop offset="5%" stopColor={colors[index+3]} stopOpacity="0.5"></stop>
+              <stop offset="95%" stopColor={colors[index+2]} stopOpacity="0.66"></stop>
             </linearGradient>
           </defs>
           <path d="M 0,600 C 0,600 0,360 0,360 C 54.20213549337261,343.78148011782037 108.40427098674522,327.5629602356407 172,329 C 235.59572901325478,330.4370397643593 308.58505154639175,349.5296391752577 375,360 C 441.41494845360825,370.4703608247423 501.25552282768774,372.3184830633284 559,379 C 616.7444771723123,385.6815169366716 672.3928571428571,397.1964285714286 738,395 C 803.6071428571429,392.8035714285714 879.1730486008837,376.89580265095725 928,370 C 976.8269513991163,363.10419734904275 998.9149484536083,365.22036082474233 1050,375 C 1101.0850515463917,384.77963917525767 1181.1671575846833,402.2227540500736 1251,401 C 1320.8328424153167,399.7772459499264 1380.4164212076585,379.8886229749632 1440,360 C 1440,360 1440,600 1440,600 Z" stroke="none" strokeWidth="0" fill="url(#coldGradient)">
