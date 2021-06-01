@@ -163,6 +163,14 @@ const colors = ['#ffb3a7',
 '#a78e44',
 '#bacac6']
 
+function getWaveCount(n,m) {
+  var result = Math.random()*(m+1-n)+n;
+  while(result>m) {
+      result = Math.random()*(m+1-n)+n;
+  }
+  return result;
+}
+
 export default class Test extends Component {
   constructor(props) {
     super(props);
@@ -190,6 +198,7 @@ export default class Test extends Component {
     const index = Math.floor((Math.random()*(colors.length - 4)))
     const currentColor = colors[index]
     const currentShi = this.state.ci
+    const totalWaves = getWaveCount(1,5)
     return (
       <>
         <div id="wave" className="fixed">
