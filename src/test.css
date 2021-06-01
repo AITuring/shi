@@ -1,6 +1,7 @@
 
   #background, #foreground {
     position: absolute;
+    font-size: 10px;
   }
   #wave {
     bottom: 0;
@@ -29,7 +30,7 @@
   }
   
   .ci {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 30vh;
     margin-bottom: 4vh;
   }
