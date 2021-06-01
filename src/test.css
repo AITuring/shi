@@ -33,6 +33,8 @@
     font-size: 2.4rem;
     margin-top: 30vh;
     margin-bottom: 4vh;
+    display: flex;
+    align-items: center;
   }
   
   .ci-title {
@@ -49,8 +51,14 @@
     border-radius: 4px;
     padding: 3px;
   }
+
+  @media only screen and (max-width: 750px) {
+    .ci {
+      display: inline;
+    }
+
+    /* Styles */
+    
+    }
   
-  .dynasty {
-    /* margin-right: 20px; */
-  }
   

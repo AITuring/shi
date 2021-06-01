@@ -189,6 +189,7 @@ export default class Test extends Component {
   render() {
     const index = Math.floor((Math.random()*colors.length))
     const currentColor = colors[index]
+    const currentShi = this.state.ci
     return (
       <>
         <div id="wave" className="fixed">
@@ -271,13 +272,17 @@ export default class Test extends Component {
         </svg>
       </div>
       <div className="shi-body">
-        <div className="ci">{this.state.ci}</div>
+        {/* <div className="ci">{this.state.ci}</div> */}
+        <div className="ci">
+          <div className="ci-left">{currentShi.slice(0,currentShi.indexOf('，')+1)}</div>
+          <div className="ci-right">{currentShi.slice(currentShi.indexOf('，')+1)}</div>
+        </div>
         
         <div className="ci-title">
           <div className="title"><a href={`https://www.google.com.hk/search?q=${this.state.author} ${this.state.title}`} target="_blank">[{this.state.title}]</a></div>
           <div className="time">
-            <div className="dynasty"><a href={`https://www.google.com.hk/search?q=${this.state.dynasty}`} target="_blank">{this.state.dynasty}</a></div>
-            <div className="author">·<a href={`https://www.google.com.hk/search?q=${this.state.author}`} target="_blank">{this.state.author}</a></div>
+            {/* <div className="dynasty"><a href={`https://www.google.com.hk/search?q=${this.state.dynasty}`} target="_blank">{this.state.dynasty}</a></div> */}
+            <div className="author"><a href={`https://www.google.com.hk/search?q=${this.state.author}`} target="_blank">{this.state.author}</a></div>
           </div>
         </div>
       </div>
