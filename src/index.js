@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import Test from "./test";
+import Temp from "./temp";
 import './styles.css'
 
 const rootElement = document.getElementById("root");
