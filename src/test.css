@@ -1,70 +1,67 @@
+#background,
+#foreground {
+  position: absolute;
+  font-size: 10px;
+}
+#wave {
+  bottom: 0;
+  height: calc(20vh + 20vw);
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+}
 
-  #background, #foreground {
-    position: absolute;
-    font-size: 10px;
-  }
-  #wave {
-    bottom: 0;
-    height: calc(20vh + 20vw);
-  }
-  .fixed {
-    position: fixed;
-    width: 100%;
-  }
-  
-  .shi-body {
-    font-family: jinling;
-    font-size: 1.2rem;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    /* background: linear-gradient(to right, transparent, mistyrose); */
-  }
-  
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-  
+.shi-body {
+  font-family: jinling;
+  font-size: 1.2rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  /* background: linear-gradient(to right, transparent, mistyrose); */
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.ci {
+  font-size: 2.4rem;
+  margin-top: 30vh;
+  margin-bottom: 4vh;
+  display: flex;
+  align-items: center;
+}
+
+.ci-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40vh;
+}
+
+.time {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  background: #bc4b41;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.beian {
+  position: absolute;
+  bottom: 10px;
+  left: 48%;
+}
+
+@media only screen and (max-width: 750px) {
   .ci {
-    font-size: 2.4rem;
-    margin-top: 30vh;
-    margin-bottom: 4vh;
-    display: flex;
-    align-items: center;
-  }
-  
-  .ci-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40vh;
-  }
-  
-  .time {
-    margin-left: 2rem;
-    display: flex;
-    justify-content: center;
-    background: #BC4B41;
-    border-radius: 4px;
-    padding: 3px;
+    display: inline;
   }
 
-  .beian {
-    position: absolute;
-    bottom: 10px;
-    left: 40%;
-  }
-
-  @media only screen and (max-width: 750px) {
-    .ci {
-      display: inline;
-    }
-
-    /* Styles */
-    
-    }
-  
-  
+  /* Styles */
+}
