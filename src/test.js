@@ -311,12 +311,7 @@ export default class Test extends Component {
           </div>
         </div>
       </div>
-      <img 
-        className="love" 
-        src={this.state.imgUrl}
-        onMouseOver={()=>{this.changeLoved}}
-        onMouseLeave={()=>{this.changeToLove}}
-        />
+      <a className="beian" href="https://beian.miit.gov.cn/" target="_blank">津ICP备17010613号-1</a>
       </>
     );
   }
