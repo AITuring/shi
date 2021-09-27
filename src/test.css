@@ -55,7 +55,7 @@ a {
 .beian {
   position: absolute;
   bottom: 10px;
-  left: 48%;
+  left: 42%;
 }
 
 @media only screen and (max-width: 750px) {
