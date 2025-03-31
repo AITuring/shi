@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'jinling';
+  src: url('./font/jinling.TTF');
+}
+
+.shi-body {
+  font-family: jinling;
+  font-size: 1.2rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: linear-gradient(to right, transparent, mistyrose); */
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.ci {
+  font-size: 2.5rem;
+  margin-top: 30vh;
+  margin-bottom: 4vh;
+}
+
+.ci-title {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  background: #BC4B41;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.dynasty {
+  /* margin-right: 20px; */
+}

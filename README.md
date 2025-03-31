@@ -1,20 +1,54 @@
-# shi
+# React + TypeScript + Vite
 
-一个类似于几枝的页面，主要自己弄着玩。主体没啥问题，细节还需好好打磨
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-技术栈react+react-router+svg ，api是今日诗词
+Currently, two official plugins are available:
 
-使用路由只是为了方便调试，其实没什么用
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## TODO
-- [x] 自适应，媒体查询没起作用
-- [x] 随机渐变色
-- [ ] 颜色虽然随机了，但是并不是很好看，还是得分类一下
-- [ ] 波浪还需调整
-- [ ] 想要随机波浪，现在怎么搞都是四个，先放一放好了
-- [x] favicon.ico
-- [ ] pwd
-- [ ] chrome插件
-- [ ] 增加喜欢按钮，把喜欢的诗存起来
-- [ ] 以后可能换成其他api
-- [ ] 字体加载慢，刷新页面之后先出现的是等宽字体，不是设置好的字体
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```

@@ -3,6 +3,20 @@
   src: url('./font/jinling.TTF');
 }
 
+#background,
+#foreground {
+  position: absolute;
+  font-size: 10px;
+}
+#wave {
+  bottom: 0;
+  height: calc(20vh + 20vw);
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+
 .shi-body {
   font-family: jinling;
   font-size: 1.2rem;
@@ -11,6 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
   /* background: linear-gradient(to right, transparent, mistyrose); */
 }
 
@@ -20,25 +35,38 @@ a {
 }
 
 .ci {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-top: 30vh;
   margin-bottom: 4vh;
+  display: flex;
+  align-items: center;
 }
 
 .ci-title {
   display: flex;
   align-items: center;
+  margin-bottom: 40vh;
 }
 
 .time {
   margin-left: 2rem;
   display: flex;
   justify-content: center;
-  background: #BC4B41;
+  background: #bc4b41;
   border-radius: 4px;
   padding: 3px;
 }
 
-.dynasty {
-  /* margin-right: 20px; */
+.beian {
+  position: absolute;
+  bottom: 10px;
+  left: 42%;
+}
+
+@media only screen and (max-width: 750px) {
+  .ci {
+    display: inline;
+  }
+
+  /* Styles */
 }
